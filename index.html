@@ -3,104 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AgroPro - Solutions Agroalimentaires B2B</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>TORO AGRO BUSINESS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      color: #e0e0e0;
+      background: #0f0f13;
+    }
+
+    .logo-container {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      background: linear-gradient(135deg, #1a1a25, #0d0d15);
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #2a2a3a;
+    }
+    .logo {
+      font-size: 3.4rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #4caf50, #8bc34a, #cddc39);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+      letter-spacing: -0.5px;
+    }
+    .logo-sub {
+      font-size: 1.25rem;
+      color: #a0d2a0;
+      margin-top: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: #1a1a25;
+      padding: 2.2rem;
+      margin-bottom: 2.2rem;
+      border-radius: 14px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+      border: 1px solid #2a2a3a;
+    }
+    .section h2 {
+      color: #8bc34a;
+      margin-bottom: 1.4rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .section p, .section li {
+      color: #d0d0e0;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 16px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.35s ease;
+      border: 1px solid #333;
+    }
+    .gallery img:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(76, 175, 80, 0.35);
+      border-color: #4caf50;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 1000;
+    }
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      max-height: 90%;
+    }
+    .modal-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      border: 3px solid #4caf50;
+      border-radius: 8px;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-info div {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .contact-info strong {
+      color: #8bc34a;
+    }
+
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #222;
+      color: #eee;
+      font-size: 1rem;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #888;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.8rem;
+      background: #0a0a12;
+      color: #a0a0b0;
+      margin-top: 2.5rem;
+      border-top: 1px solid #222;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #4caf50, #2e7d32);
+      color: white;
+      padding: 11px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 12px;
+      font-weight: 600;
+      transition: opacity 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    ul {
+      padding-left: 1.6rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- En-tête -->
-  <header>
-    <div class="container">
-      <h1>AgroPro</h1>
-      <nav>
-        <ul>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a href="#fruits">Fruits Transformés</a></li>
-          <li><a href="#poulets">Poulets de Chair</a></li>
-          <li><a href="#contact">Contact B2B</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="logo-container">
+    <div class="logo">TORO AGRO BUSINESS</div>
+    <div class="logo-sub">Export • Pêche • Agriculture • Sénégal</div>
+  </div>
 
-  <!-- Section Accueil -->
-  <section id="accueil" class="hero">
-    <div class="container">
-      <h2>Solutions Agroalimentaires B2B</h2>
-      <p>Fournisseur fiable de fruits transformés et de viande de poulet de qualité pour les professionnels.</p>
+  <div class="container">
+    <div class="section">
+      <h2>Notre mission</h2>
+      <p>
+        Basée à Dakar, TORO AGRO BUSINESS est un acteur clé de l’exportation agroalimentaire au Sénégal. 
+        Nous garantissons la qualité, la traçabilité et la conformité de nos produits — poisson frais/congelé, 
+        arachide, niébé, sésame — pour nos partenaires internationaux.
+      </p>
     </div>
-  </section>
 
-  <!-- Section Fruits Transformés -->
-  <section id="fruits" class="products">
-    <div class="container">
-      <h2>Fruits Transformés</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <h3>Confitures Artisanales</h3>
-          <p>En gros, formats 5kg ou 10kg. Disponibles en plusieurs saveurs.</p>
-        </div>
-        <div class="product-card">
-          <h3>Jus de Fruits Pressés</h3>
-          <p>Pure jus sans sucre ajouté, conditionnés en IBC (1000L) ou bidons.</p>
-        </div>
-        <div class="product-card">
-          <h3>Purées de Fruits</h3>
-          <p>Ideal pour l’industrie alimentaire : mangue, banane, ananas, etc.</p>
-        </div>
+    <div class="section">
+      <h2>Galerie professionnelle</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Export poisson" onclick="openModal('photo1.jpg')">
+        <img src="photo2.jpg" alt="Champs d'arachide" onclick="openModal('photo2.jpg')">
+        <img src="photo3.jpg" alt="Conditionnement" onclick="openModal('photo3.jpg')">
+        <img src="photo4.jpg" alt="Entrepôt" onclick="openModal('photo4.jpg')">
+        <img src="photo5.jpg" alt="Port de pêche" onclick="openModal('photo5.jpg')">
+        <img src="photo6.jpg" alt="Équipe TORO" onclick="openModal('photo6.jpg')">
       </div>
     </div>
-  </section>
 
-  <!-- Section Poulets de Chair -->
-  <section id="poulets" class="products">
-    <div class="container">
-      <h2>Poulets de Chair – Distribution B2B</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <h3>Poulets Entiers Frais</h3>
-          <p>Livraison sous 24h, certifiés élevés en France.</p>
-        </div>
-        <div class="product-card">
-          <h3>Découpes Congelées</h3>
-          <p>Cuisse, ailerons, filets – emballés sous vide par 10kg.</p>
-        </div>
-        <div class="product-card">
-          <h3>Abattage & Conditionnement</h3>
-          <p>Service personnalisé selon vos besoins (halal, bio, etc.)</p>
-        </div>
+    <div class="section">
+      <h2>Contactez-nous</h2>
+      <div class="contact-info">
+        <div><strong>📍 Adresse :</strong> Grand Yoff, Cité Millionnaire, Bâtiment B S N°207, Dakar, Sénégal</div>
+        <div><strong>📞 Téléphone :</strong> +221 78 845 28 16</div>
+        <div><strong>✉️ Email :</strong> contact@toroagrobusiness.sn</div>
       </div>
-    </div>
-  </section>
 
-  <!-- Section Contact B2B -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact Commercial B2B</h2>
-      <form id="contactForm">
-        <input type="text" id="nom" placeholder="Nom de votre entreprise" required />
-        <input type="email" id="email" placeholder="Email professionnel" required />
-        <select id="interet" required>
-          <option value="">Sélectionnez votre besoin</option>
-          <option value="fruits">Fruits Transformés</option>
-          <option value="poulets">Poulets de Chair</option>
-          <option value="both">Les deux</option>
-        </select>
-        <textarea id="message" placeholder="Détaillez votre demande (volume, fréquence, etc.)"></textarea>
-        <button type="submit">Envoyer la demande</button>
+      <!-- FORMULAIRE FONCTIONNEL -->
+      <form action="https://formspree.io/f/votre-id-formulaire" method="POST">
+        <input type="text" name="nom" placeholder="Votre nom complet" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <input type="tel" name="telephone" placeholder="Téléphone (optionnel)">
+        <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
+        <button type="submit" class="btn">Envoyer le message</button>
       </form>
-      <p id="formMessage"></p>
     </div>
-  </section>
+  </div>
 
-  <!-- Pied de page -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 AgroPro – Tous droits réservés | Site B2B Agroalimentaire</p>
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <div class="modal-content">
+      <img id="modalImage" src="">
     </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 TORO AGRO BUSINESS — RCCM : SN.DKR.2023.B.9159</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImage').src = src;
+      document.getElementById('imageModal').style.display = 'block';
+    }
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
