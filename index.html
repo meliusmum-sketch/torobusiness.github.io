@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgroPro - Solutions Agroalimentaires B2B</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header>
+    <div class="container">
+      <h1>AgroPro</h1>
+      <nav>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#fruits">Fruits Transformés</a></li>
+          <li><a href="#poulets">Poulets de Chair</a></li>
+          <li><a href="#contact">Contact B2B</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Section Accueil -->
+  <section id="accueil" class="hero">
+    <div class="container">
+      <h2>Solutions Agroalimentaires B2B</h2>
+      <p>Fournisseur fiable de fruits transformés et de viande de poulet de qualité pour les professionnels.</p>
+    </div>
+  </section>
+
+  <!-- Section Fruits Transformés -->
+  <section id="fruits" class="products">
+    <div class="container">
+      <h2>Fruits Transformés</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Confitures Artisanales</h3>
+          <p>En gros, formats 5kg ou 10kg. Disponibles en plusieurs saveurs.</p>
+        </div>
+        <div class="product-card">
+          <h3>Jus de Fruits Pressés</h3>
+          <p>Pure jus sans sucre ajouté, conditionnés en IBC (1000L) ou bidons.</p>
+        </div>
+        <div class="product-card">
+          <h3>Purées de Fruits</h3>
+          <p>Ideal pour l’industrie alimentaire : mangue, banane, ananas, etc.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Poulets de Chair -->
+  <section id="poulets" class="products">
+    <div class="container">
+      <h2>Poulets de Chair – Distribution B2B</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <h3>Poulets Entiers Frais</h3>
+          <p>Livraison sous 24h, certifiés élevés en France.</p>
+        </div>
+        <div class="product-card">
+          <h3>Découpes Congelées</h3>
+          <p>Cuisse, ailerons, filets – emballés sous vide par 10kg.</p>
+        </div>
+        <div class="product-card">
+          <h3>Abattage & Conditionnement</h3>
+          <p>Service personnalisé selon vos besoins (halal, bio, etc.)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact B2B -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Commercial B2B</h2>
+      <form id="contactForm">
+        <input type="text" id="nom" placeholder="Nom de votre entreprise" required />
+        <input type="email" id="email" placeholder="Email professionnel" required />
+        <select id="interet" required>
+          <option value="">Sélectionnez votre besoin</option>
+          <option value="fruits">Fruits Transformés</option>
+          <option value="poulets">Poulets de Chair</option>
+          <option value="both">Les deux</option>
+        </select>
+        <textarea id="message" placeholder="Détaillez votre demande (volume, fréquence, etc.)"></textarea>
+        <button type="submit">Envoyer la demande</button>
+      </form>
+      <p id="formMessage"></p>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 AgroPro – Tous droits réservés | Site B2B Agroalimentaire</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
